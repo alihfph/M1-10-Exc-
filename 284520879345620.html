@@ -15,61 +15,10 @@
         9) Create a container with a nested paragraph and a nested unordered list
         10) Create a footer with some information about the page creator 
 
-
-        CSS EXERCISES
-
-        11) Give a maximum width to the body and center it in the page
-        12) Set every h1 to be centered
-        13) Change the color of each link in the page
-        14) Create a class with a border
-        15) Set table to have rounded corners
-        16) Add margin between every paragraph
-        17) Create a class which change font size and boldness
-        18) Create a class to hide a content
-        19) Add a green border to each td
-        20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
-
-        JS EXERCISES
-
-        21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
-        22) Create an object with properties such name, surname, email
-        23) Delete Email from the previously created object
-        24) Create an array with 10 strings in it
-        25) Print in the console every string in the previous array
-        26) Create an array with 100 random numbers in it
-        27) Wrote a function to get the MAX and the MIN from the previously created array
-        28) Create an array of arrays, in which every array has 10 random numbers
-        29) Create a function that gets 2 arrays and returns the longest one
-        30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
-
-        DOM 
-
-        31) Get element with ID "container" from the page
-        32) Get every "td" from the page
-        33) Create a cycle that prints the text inside every td of the page
-        34) Write a function to change the heading of the page
-        35) Write a function to add an extra row to the table
-        36) Write a function to add the class "test" to each row in the table
-        37) Write a function to add a red background to every link in the page
-        38) Console log "Page loaded" when the page is correctly loaded
-        39) Write a function to add new items to a UL
-        40) Write a function to empty a list
-
-        EXTRA 
-
-        41) Add an eventListener to alert when the mouse is over a link, displaying the URL
-        42) Add a button to hide every image on the page
-        43) Add a button to hide and show the table from the page
-        44) Write a function to sum every number inside the TD (if the content is numeric)
-        45) Delete the last letter from the title each time the user clicks on it
-        46) Change a single TD background color when the user clicks on it
-        47) Add a button DELETE, on click it should delete a random TD from the page
-        48) Add a pink border to a cell when the mouse is over it
-        49) Write a function to add a table with 4 rows and 3 columns programmatically
-        50) Write a function to remove the table from the page
-    --><head>
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <!-- 1) Create a title for the page -->
+        <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
         <title>This is the tite of the page</title>
         <link rel="StyleSheet" href="./style.css">
     </head>
@@ -78,26 +27,8 @@
              img {
     width: 200px;
     height: 121px;
-
   }
 
-/*   
-  #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ddd;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-  }  */
         </style>
         <!-- 2) Create a heading -->
         <h1 id="heading">This is the first Heading</h1>
@@ -167,6 +98,67 @@
                 </div>
             </section>
             <script src="./index.js">
+
+            // JS EXERCISES
+
+// 21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
+// 22) Create an object with properties such name, surname, email
+// 23) Delete Email from the previously created object
+// 24) Create an array with 10 strings in it
+// 25) Print in the console every string in the previous array
+// 26) Create an array with 100 random numbers in it
+// 27) Wrote a function to get the MAX and the MIN from the previously created array
+// 28) Create an array of arrays, in which every array has 10 random numbers
+// 29) Create a function that gets 2 arrays and returns the longest one
+// 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+let x = "John"
+let y = "Deo"
+console.log(x,y)
+let person ={
+    name: "Hafiz",
+    surname: "Ali",
+    email: "ali.hfph@gmail.com"
+}
+delete person.email
+
+let string1To10 = ["1","2","3","4","5","6","7","8","9","10"]
+let valueof10arrays = string1To10.values()
+for (let value of valueof10arrays){
+    console.log(value)
+}
+console.log(Math.floor(Math.random() * 100))
+
+
+var arrRand = [];
+    while(arrRand.length < 11){
+        var random = Math.floor(Math.random() * 10) + 1;
+        if(arrRand.indexOf(random) === -1) arrRand.push(random);
+    }
+    console.log(arrRand);
+
+
+    const array1 = [1,2,3,4]
+    let arraylenght1 =  array1.length
+    const array2 = [1,2,5,7,8,]
+    let arraylenght2 = array2.length
+    function maximumarrays(x,y) {
+    if (x !== y) {      
+        return console.log(Math.max(x,y))
+    }}
+    maximumarrays(arraylenght2,arraylenght1)
+
+
+function sumofHeighes(x,y) {
+    if (x!==y){
+
+    }
+    
+}   
+
+
+
+
+
         // 31) Get element with ID "container" from the page
         // 32) Get every "td" from the page
         // 33) Create a cycle that prints the text inside every td of the page
