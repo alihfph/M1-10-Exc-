@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<!-- saved from url=(0446)https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/284520879345620.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210215%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20210215T113222Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27M1.D10%252050ex.html&X-Amz-Signature=9710de75c4e80fa9df1fcf032f6232cc6b752f7f9c3832474dd54f149464b2ec -->
+<html><!--
+
+        HTML EXERCISES
+
+        1) Create a title for the page
+        2) Create a heading
+        3) Create an ordered list
+        4) Create a table with 5 columns and 4 rows
+        5) Add an image to each second cell of every row
+        6) Add a anchor link for every image
+        7) Merge together 2 table cells
+        8) Divide the page using a horizontal line
+        9) Create a container with a nested paragraph and a nested unordered list
+        10) Create a footer with some information about the page creator 
+
+        CSS EXERCISES
+
+        11) Give a maximum width to the body and center it in the page
+        12) Set every h1 to be centered
+        13) Change the color of each link in the page
+        14) Create a class with a border
+        15) Set table to have rounded corners
+        16) Add margin between every paragraph
+        17) Create a class which change font size and boldness
+        18) Create a class to hide a content
+        19) Add a green border to each td
+        20) Add a dotted red border to each tr (note: tr does not accept a border property ;-) )
+
+
+        EXTRA 
+
+        41) Add an eventListener to alert when the mouse is over a link, displaying the URL
+        42) Add a button to hide every image on the page
+        43) Add a button to hide and show the table from the page
+        44) Write a function to sum every number inside the TD (if the content is numeric)
+        45) Delete the last letter from the title each time the user clicks on it
+        46) Change a single TD background color when the user clicks on it
+        47) Add a button DELETE, on click it should delete a random TD from the page
+        48) Add a pink border to a cell when the mouse is over it
+        49) Write a function to add a table with 4 rows and 3 columns programmatically
+        50) Write a function to remove the table from the page
+    --><head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    </head>
+    <title>This  the title of the Page</title>
+          <!-- 1) Create a title for the page
+        2) Create a heading        
+        3) Create an ordered list
+        4) Create a table with 5 columns and 4 rows
+        5) Add an image to each second cell of every row
+        6) Add a anchor link for every image
+        7) Merge together 2 table cells
+        8) Divide the page using a horizontal line
+        9) Create a container with a nested paragraph and a nested unordered list
+        10) Create a footer with some information about the page creator  -->
+
+    <body>
+        <h1>This is Heading</h1>
+        <ol>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+        <table>
+            <tr>
+                <td>x</td>
+                <td colspan="2">x <a href="www.google.com">Google it</a> </td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td colspan="2">x <a href="www.google.com">Google it</a></td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td colspan="2">x <a href="www.google.com">Google it</a></td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td colspan="2" >x <a href="www.google.com">Google it</a></td>
+                <td>x</td>
+                <td>x</td>
+            </tr>
+        </table>
+        <hr>
+
+        <div>
+            <p>This is the paragraph</p>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <footer>
+            <p> This is my footer</p>
+        </footer>
+<script>
+        //    JS EXERCISES
+
+// 21) Given variable x = "John" and y = "Doe", write on the console log "John <> Doe"
+// 22) Create an object with properties such name, surname, email
+// 23) Delete Email from the previously created object
+// 24) Create an array with 10 strings in it
+// 25) Print in the console every string in the previous array
+// 26) Create an array with 100 random numbers in it
+// 27) Wrote a function to get the MAX and the MIN from the previously created array
+// 28) Create an array of arrays, in which every array has 10 random numbers
+// 29) Create a function that gets 2 arrays and returns the longest one
+// 30) Create a function that gets 2 arrays of numbers and returns the one with the higher sum of values
+
+function arrayCreation() {
+    let array = ["1","2","3","4","5","6","7","8","9","10"] 
+    console.log(array)   
+
+}
+
+function printarray() {
+    printarray1 =  ["1","2","3","4","5","6","7","8","9","10"] 
+    for (i=0; i<printarray1.length; i++){
+    console.log(printarray1[i])
+    }
+    return printarray1
+    
+}
+function array100Random() {
+    let array = []
+    for (i=0; i<10; i++){
+        let randomNumber = Math.floor(Math.random()*100)
+        array.push(randomNumber)
+    }
+    return array;    
+}
+function maxAndMin() {
+    let array = array100Random();
+    let min = 9999
+    let max = 0
+    for (let i=0; i<100; i++){
+        if (array[i]<min) {
+            min = array[i];
+        }
+        if (array[i]> max) {
+            max = array[i];           
+        }
+    }
+    console.log(min)
+    console.log(max)
+    
+}
+
+function createArrayOfArrays() {
+    let masterArray = [];
+    for (let y = 0; y < 10; y++) {
+        let array = [];
+        for (let i = 0; i < 10; i++) {
+            array.push(Math.floor(Math.random() * 100));
+        }
+        console.log(array); // [34, 23, 67, 9, ...]
+        masterArray.push(array);
+    }
+}
+
+function comparasion() {
+    array1.lenght > array.lenght ? array1.lenght :  array.lenght 
+    console.lenght()
+}
+
+// DOM 
+
+// 31) Get element with ID "container" from the page
+// 32) Get every "td" from the page
+// 33) Create a cycle that prints the text inside every td of the page
+// 34) Write a function to change the heading of the page
+// 35) Write a function to add an extra row to the table
+// 36) Write a function to add the class "test" to each row in the table
+// 37) Write a function to add a red background to every link in the page
+// 38) Console log "Page loaded" when the page is correctly loaded
+// 39) Write a function to add new items to a UL
+// 40) Write a function to empty a list
+
+function idContainer() {
+    let getElelet = document.getElementById("container")    
+}
+function getTD() {
+    let getTD = document.getElementsByTagName("td")
+    
+}
+function prints() {
+    let getTD = document.getElementsByTagName("td");
+    for (let i=0; i < getTD.length ; i++){
+        console.log(getTD[i].innerText);
+    }    
+}
+function changeHeading() {
+    let getHeading =document.getElementsByTagName("h1")
+    getHeading[0].innerText = "This is New Heading"
+    console.log(getHeading)
+    
+}
+
+function addRowa() {
+    let aDD1Row = document.createElement("tr")
+    for ( i=0; i<5; i++){
+        let creatTD = document.createElement("td")
+        creatTD.innerText = "Y"
+        aDD1Row.appendChild(creatTD)
+    
+    }
+   document.getElementsByTagName("table")[0].appendChild(aDD1Row)
+
+    console.log()
+}
+function addClass() {
+    let classAdd = document.getElementsByTagName("tr")
+    for (let i = 0; i< classAdd.lenght; i++){
+    classAdd[i].classList.add("Test")
+    }
+    console.log(classAdd)
+    }
+
+function addBackground() {
+    let getAnchor =  document.getElementsByTagName("a")
+    for (let i=0; i< getAnchor.length; i++){
+        getAnchor[i].style.backgroundColor = "red"
+    }
+    console.log(getAnchor)
+
+    
+}
+function addUL() {
+    let getulLink = document.createElement("li")
+    getulLink.innerText = "this is new"
+    let refto = document.querySelector("ul")
+    refto.appendChild(getulLink)
+    console.log()
+    
+}
+
+function emptyList() {
+    let refto = document.querySelector("ul")
+    refto.innerHTML = ""
+
+    
+}
+</script>
+
+</body>
+</html>
